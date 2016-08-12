@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="SolstatProjectUI.Pages.radiation.radiationPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             xmlns:WPF="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF" Height="546.829" Width="824.146">
+    <Grid Style="{StaticResource ContentRoot}">
+        <WPF:Map x:Name="bmap" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="333" Width="615" Cursor="Cross" IsEnabled="False">
+            <WPF:Map.CredentialsProvider>
+                <WPF:ApplicationIdCredentialsProvider ApplicationId="Amn1lyfxJ6ynWfmWS2yHieCZX2TGckgYF3HAh7t4L4iZA_kxqiS5FV29e9b7ujME"/>
+            </WPF:Map.CredentialsProvider>
+        </WPF:Map>
+        <ListView x:Name="CountyList" HorizontalAlignment="Left" Height="333" VerticalAlignment="Top" Width="139" Margin="649,0,0,0" SelectionChanged="CountyList_SelectionChanged">
+            <ListView.View>
+                <GridView ColumnHeaderStringFormat="County">
+                    <GridViewColumn Header="County" Width="135px"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Longitude:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="79" Margin="136,368,0,0"/>
+        <TextBox x:Name="longitudeTB" HorizontalAlignment="Left" Height="27" Margin="215,362,0,0" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" Width="120" TextChanged="longitudeTB_TextChanged"/>
+        <Label Content="Latitude:" HorizontalAlignment="Left" Margin="136,416,0,0" VerticalAlignment="Top" Height="26" Width="79"/>
+        <TextBox x:Name="latitudeTB" HorizontalAlignment="Left" Height="27" Margin="215,413,0,0" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" Width="120" TextChanged="latitudeTB_TextChanged"/>
+        <DatePicker x:Name="startDate" HorizontalAlignment="Left" Margin="495,362,0,0" VerticalAlignment="Top" Width="120" FirstDayOfWeek="Monday" DisplayDateEnd="2017-04-10"/>
+        <DatePicker x:Name="endDate" HorizontalAlignment="Left" Margin="495,413,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label" Content="Start Date" HorizontalAlignment="Left" Margin="407,362,0,0" VerticalAlignment="Top" Width="83"/>
+        <Label x:Name="label_Copy" Content="End Date" HorizontalAlignment="Left" Margin="407,410,0,0" VerticalAlignment="Top" Width="74"/>
+        <Button x:Name="SearchButton" Content="Buscar" HorizontalAlignment="Left" Margin="649,431,0,0" VerticalAlignment="Top" Width="139" Height="41" Click="SearchButton_Click"/>
+    </Grid>
+</UserControl>

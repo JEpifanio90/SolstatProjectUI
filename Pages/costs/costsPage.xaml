@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="SolstatProjectUI.Pages.costs.costsPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="546.829" d:DesignWidth="824.146">
+    <Grid Style="{StaticResource ContentRoot}">
+
+        <Label x:Name="labelInversion" HorizontalContentAlignment="Right"  Height="40"  Content="Inversión inicial:" HorizontalAlignment="Left" Margin="46,184,0,0" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="inversionInicialTxt" Height="40" TextWrapping="Wrap" Text="" Width="150"  Margin="166,163,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="labelInteres" HorizontalContentAlignment="Right" Height="40"  Content="Interes:" HorizontalAlignment="Left" Margin="369,184,0,0" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="interesTxt" Height="40" TextWrapping="Wrap" Text="" Width="150"  Margin="499,163,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <Label x:Name="labelPeriodo" HorizontalContentAlignment="Right"  Height="40"  Content="Perdiodo:" HorizontalAlignment="Left" Margin="46,234,0,0" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="periodoTxt" Height="40" TextWrapping="Wrap" Text="" Width="150"  Margin="166,214,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" IsReadOnly="True"/>
+        <Label x:Name="labelOtro" HorizontalContentAlignment="Right" Height="40"  Content="Interes:" HorizontalAlignment="Left" Margin="369,234,0,0" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="otroTxt" Height="40" TextWrapping="Wrap" Text="" Width="150"  Margin="499,214,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button x:Name="components_eeUpdateBtn" Content="Actualizar BD" HorizontalAlignment="Left" Margin="35,420,0,0" VerticalAlignment="Top" Width="183" Click="components_eeUpdateBtn_Click"/>
+
+    </Grid>
+</UserControl>
