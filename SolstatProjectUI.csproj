@@ -90,6 +90,7 @@
     </Page>
     <Compile Include="HelperClasses\MainPhotoComponent.cs" />
     <Compile Include="HelperClasses\MainThermoComponent.cs" />
+    <Compile Include="HelperClasses\results.cs" />
     <Compile Include="HelperClasses\SecondaryPhotoComponents.cs" />
     <Compile Include="HelperClasses\SecondaryThermoComponents.cs" />
     <Compile Include="MainWindow.xaml.cs">

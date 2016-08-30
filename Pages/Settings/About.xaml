@@ -8,10 +8,12 @@
     <Grid>
         <ScrollViewer>
             <StackPanel MinWidth="200">
-                <TextBlock Text="ABOUT" Style="{StaticResource Heading2}" />
-                <TextBlock Text="Programmed by:" Margin="0,0,0,8" TextWrapping="Wrap">
-                    <Label>José Epifanio 1607032</Label>
-                </TextBlock>
+                <TextBlock Text="Acerca De" Style="{StaticResource Heading2}" />
+                <TextBlock Text="Versión: 1.0.0" Margin="0,0,0,8" TextWrapping="Wrap"></TextBlock>
+                <TextBlock Text="Facultad de Ingeniería Mecánica y Eléctrica" Margin="0,0,0,8" TextWrapping="Wrap"></TextBlock>
+                <TextBlock Text="Enero-Diciembre 2016" Margin="0,0,0,8" TextWrapping="Wrap"></TextBlock>
+                <TextBlock Text="Dr. Raymundo Said Zamora Pequeño" Margin="0,0,0,8" TextWrapping="Wrap"></TextBlock>
+                <TextBlock Text="Colaboración de IME e ITS" Margin="0,0,0,8" TextWrapping="Wrap"></TextBlock>
             </StackPanel>
         </ScrollViewer>
     </Grid>

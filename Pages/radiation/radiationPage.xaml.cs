@@ -1,5 +1,6 @@
 ﻿using Microsoft.Maps.MapControl.WPF;
 using SolstatProject.Models;
+using SolstatProjectUI.HelperClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -98,19 +99,13 @@ namespace SolstatProjectUI.Pages.radiation
                 {
                     latitude = Double.Parse(latitudeTB.Text.ToString());
                     longitude = Double.Parse(longitudeTB.Text.ToString());
-                    /*resultsTab res = new resultsTab(startDate.SelectedDate.Value, endDate.SelectedDate.Value, latitude, longitude);
-                    latitudeLabel.Content = res.getLatitude().ToString().Substring(0, 4);
-                    wsLabel.Content = res.getws().ToString().Substring(0, 4);
-                    ozLabel.Content = res.getoz().ToString().Substring(0, 4);
-                    h0Label.Content = res.getH0().ToString().Substring(0, 4) + " MJ/m2";
-                    daysLabel.Content = res.getDays();
-                    longitudeLabel.Content = res.getLongitude().ToString().Substring(0, 4);
-                    yearsLabel.Content = res.getYears().ToString();
-                    //ADD all necesary data to the dictionary
-                    resultInfo.Add("radiationProduced", res.getH0().ToString().Substring(0, 4));
-                    resultInfo.Add("elapsedTime", res.getYears().ToString());
-                    ///////////////////
-                    focusOnTab(1);*/
+                    results res = new results(startDate.SelectedDate.Value, endDate.SelectedDate.Value, latitude, longitude);
+                    Dictionary<string, string> costValues = new Dictionary<string, string>();
+                    costValues.Add("generatedEnergy", res.getH0().ToString());
+                    costValues.Add("totalYears", res.getYears().ToString());
+                    costValues.Add("startDate", startDate.SelectedDate.Value.ToString());
+                    costValues.Add("endDate", endDate.SelectedDate.Value.ToString());
+                    //TODO: find  a way to transfer this dictionary to the costs view.
                 }
                 catch (Exception exc)
                 {
