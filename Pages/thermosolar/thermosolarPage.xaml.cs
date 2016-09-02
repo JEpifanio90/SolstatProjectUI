@@ -1,4 +1,5 @@
 ﻿using Bytescout.Spreadsheet;
+using FirstFloor.ModernUI.Windows.Controls;
 using Microsoft.Win32;
 using SolstatProject.Models;
 using SolstatProjectUI.HelperClasses;
@@ -98,7 +99,7 @@ namespace SolstatProjectUI.Pages.thermosolar
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Archivo no seleccionado." + ex, "Error de archivo!", MessageBoxButton.OK);
+                ModernDialog.ShowMessage("Archivo no seleccionado." + ex.GetType().ToString(), "¡Error de archivo!!", System.Windows.MessageBoxButton.OK);
             }
             fillBrands();
         }
@@ -158,13 +159,20 @@ namespace SolstatProjectUI.Pages.thermosolar
 
         public void fillBrands()
         {
-            DataModel thermoComponentInfo = new DataModel();
-            var query = from thermoInfo in thermoComponentInfo.thermocomponents orderby thermoInfo.brand select new { thermoInfo.id, thermoInfo.brand };
-            foreach (var thermoResult in query.ToList())
+            try
             {
-                mainComponentListThermo.Items.Add(new MainThermoComponent() { id = int.Parse(thermoResult.id.ToString()), brand = thermoResult.brand.ToString() });
+                DataModel thermoComponentInfo = new DataModel();
+                var query = from thermoInfo in thermoComponentInfo.thermocomponents orderby thermoInfo.brand select new { thermoInfo.id, thermoInfo.brand };
+                foreach (var thermoResult in query.ToList())
+                {
+                    mainComponentListThermo.Items.Add(new MainThermoComponent() { id = int.Parse(thermoResult.id.ToString()), brand = thermoResult.brand.ToString() });
+                }
+                thermoComponentInfo.Dispose();
             }
-            thermoComponentInfo.Dispose();
+            catch(Exception exc)
+            {
+                ModernDialog.ShowMessage("Hubo un error con la base de datos. Tipo de error: " + exc.GetType().ToString(), "¡Error!", System.Windows.MessageBoxButton.OK);
+            }
         }
         //////////////////////////////////////////
     }

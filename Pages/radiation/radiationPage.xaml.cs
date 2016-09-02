@@ -1,4 +1,5 @@
-﻿using Microsoft.Maps.MapControl.WPF;
+﻿using FirstFloor.ModernUI.Windows;
+using Microsoft.Maps.MapControl.WPF;
 using SolstatProject.Models;
 using SolstatProjectUI.HelperClasses;
 using System;
@@ -15,6 +16,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using FirstFloor.ModernUI.Windows.Navigation;
+using FirstFloor.ModernUI.Windows.Controls;
 
 namespace SolstatProjectUI.Pages.radiation
 {
@@ -33,20 +36,27 @@ namespace SolstatProjectUI.Pages.radiation
 
         public void fillCounties()
         {
-            DataModel countyLocation = new DataModel();
-            var query = from county in countyLocation.countieslocations orderby county.name select new { county.name, county.lat, county.lng };
-            if (query != null)
+            try
             {
-                foreach (var countyInfo in query.ToList())
+                DataModel countyLocation = new DataModel();
+                var query = from county in countyLocation.countieslocations orderby county.name select new { county.name, county.lat, county.lng };
+                if (query != null)
                 {
-                    if (!countyCoordinatesList.ContainsKey(countyInfo.name))
+                    foreach (var countyInfo in query.ToList())
                     {
-                        countyCoordinatesList.Add(countyInfo.name, countyInfo.lat.ToString() + "&" + countyInfo.lng.ToString());
-                        CountyList.Items.Add(countyInfo.name.ToString());
+                        if (!countyCoordinatesList.ContainsKey(countyInfo.name))
+                        {
+                            countyCoordinatesList.Add(countyInfo.name, countyInfo.lat.ToString() + "&" + countyInfo.lng.ToString());
+                            CountyList.Items.Add(countyInfo.name.ToString());
+                        }
                     }
                 }
+                countyLocation.Dispose();
             }
-            countyLocation.Dispose();
+            catch(Exception exc)
+            {
+                ModernDialog.ShowMessage("Hubo un error en la base de datos. Tipo de error: " + exc.GetType().ToString(), "¡Error!", System.Windows.MessageBoxButton.OK);
+            }
         }
 
         //MAIN TAB 0 AND TAB 1----
@@ -206,7 +216,10 @@ namespace SolstatProjectUI.Pages.radiation
                 textBox.Background = (Brush)brush.ConvertFrom("#FFFFFF");
             }
         }
+        
         ////////////////////////////////////////
+
+
     }
 }
 

@@ -88,8 +88,7 @@ namespace SolstatProjectUI
             }
             catch (Exception error)
             {
-                MessageBox.Show("Hubo un error con al actualizar la base de datos. Tipo de error: " + error.GetType().ToString(), "¡Error!", MessageBoxButton.OK);
-
+                ModernDialog.ShowMessage("Hubo un error con al actualizar la base de datos. Tipo de error: " + error.GetType().ToString(), "¡Error!", System.Windows.MessageBoxButton.OK);
             }
         }
         ///////////////////

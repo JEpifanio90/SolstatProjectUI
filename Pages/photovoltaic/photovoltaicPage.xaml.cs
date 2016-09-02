@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using Bytescout.Spreadsheet;
 using SolstatProject.Models;
 using Microsoft.Win32;
+using FirstFloor.ModernUI.Windows.Controls;
 
 namespace SolstatProjectUI.Pages.photovoltaic
 {
@@ -109,7 +110,7 @@ namespace SolstatProjectUI.Pages.photovoltaic
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Archivo no seleccionado. "+ex.Message, "Error de Archivo", MessageBoxButton.OK);
+                ModernDialog.ShowMessage("Archivo no seleccionado. " + ex.GetType().ToString(), "¡Error de Archivo!", System.Windows.MessageBoxButton.OK);
             }
             fillPanels();
 
@@ -167,13 +168,20 @@ namespace SolstatProjectUI.Pages.photovoltaic
 
         public void fillPanels()
         {
-            DataModel photoComponentInfo = new DataModel();
-            var query = from panelInfo in photoComponentInfo.photocomponents orderby panelInfo.panels select new { panelInfo.id, panelInfo.panels };
-            foreach (var photoResult in query.ToList())
+            try
             {
-                mainComponentListPhoto.Items.Add(new MainPhotoComponent() { id = int.Parse(photoResult.id.ToString()), Panels = photoResult.panels.ToString() });
+                DataModel photoComponentInfo = new DataModel();
+                var query = from panelInfo in photoComponentInfo.photocomponents orderby panelInfo.panels select new { panelInfo.id, panelInfo.panels };
+                foreach (var photoResult in query.ToList())
+                {
+                    mainComponentListPhoto.Items.Add(new MainPhotoComponent() { id = int.Parse(photoResult.id.ToString()), Panels = photoResult.panels.ToString() });
+                }
+                photoComponentInfo.Dispose();
             }
-            photoComponentInfo.Dispose();
+            catch(Exception exc)
+            {
+                ModernDialog.ShowMessage("Hubo un error con la base de datos. Tipo de error: " + exc.GetType().ToString(), "¡Error!", System.Windows.MessageBoxButton.OK);
+            }
         }
         //////////////////////////////////////////
     }

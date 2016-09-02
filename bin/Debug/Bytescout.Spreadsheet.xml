@@ -460,6 +460,31 @@
             Sorts by row.
             </summary>
         </member>
+        <member name="T:Bytescout.Spreadsheet.Constants.VisibilityTypes">
+            <summary>
+            This simple type defines the possible states for workbook window visibility.
+            Please take a look at:
+                Open XML spec, 18.18.89 ST_Visibility (Visibility Types)
+                [MS-XLS] 2.4.345 Window1
+            </summary>
+        </member>
+        <member name="F:Bytescout.Spreadsheet.Constants.VisibilityTypes.hidden">
+            <summary>
+            Indicates the workbook window is hidden, but can be
+            shown by the user via the user interface.
+            </summary>
+        </member>
+        <member name="F:Bytescout.Spreadsheet.Constants.VisibilityTypes.veryHidden">
+            <summary>
+            Indicates the sheet is hidden and cannot be shown in the user
+            interface (UI). This state is only available programmatically.
+            </summary>
+        </member>
+        <member name="F:Bytescout.Spreadsheet.Constants.VisibilityTypes.visible">
+            <summary>
+            Indicates the workbook window is visible.
+            </summary>
+        </member>
         <member name="T:Bytescout.Spreadsheet.Constants.PrintLocation">
             <summary>
             Specifies printed page order.
@@ -7992,6 +8017,40 @@
             Indicates the sheet is visible.
             </summary>
         </member>
+        <member name="T:Bytescout.Spreadsheet.OpenXML.Types.AnchorEditType">
+            <summary>
+            This simple type specifies all possible settings for how DrawingML 
+            contents shall be resized when the rows and columns between its start
+            and ending anchor (the from and to child elements) are resized, or 
+            have additional rows/columns inserted within them.
+            
+            Please take a look at:
+                Open XML spec, 20.5.3.2 ST_EditAs simple type
+            </summary>
+        </member>
+        <member name="F:Bytescout.Spreadsheet.OpenXML.Types.AnchorEditType.absolute">
+            <summary>
+            Do Not Move or Resize With Underlying Rows/Columns
+            </summary>
+        </member>
+        <member name="F:Bytescout.Spreadsheet.OpenXML.Types.AnchorEditType.oneCell">
+            <summary>
+            Move With Cells but Do Not Resize
+            </summary>
+        </member>
+        <member name="F:Bytescout.Spreadsheet.OpenXML.Types.AnchorEditType.twoCell">
+            <summary>
+            Move and Resize With Anchor Cells
+            </summary>
+        </member>
+        <member name="T:Bytescout.Spreadsheet.OpenXML.Types.VerticalAlignRun">
+            <summary>
+            Vertical position of the text relative to the text's default appearance.
+            
+            Please take a look at:
+                Open XML spec, 18.4.14 vertAlign (Vertical Alignment)
+            </summary>
+        </member>
         <member name="T:Bytescout.Spreadsheet.Structures.PageBreak">
             <summary>
             This structure specifies individual row or column breaks
@@ -14744,6 +14803,16 @@
         <member name="F:Bytescout.MSCompoundFile.HashAlgorithmID.SHA1">
             <summary>
             (32772) SHA 1
+            </summary>
+        </member>
+        <member name="F:Bytescout.MSCompoundFile.HashAlgorithmID.SHA256">
+            <summary>
+            SHA 256 (only xlsx)
+            </summary>
+        </member>
+        <member name="F:Bytescout.MSCompoundFile.HashAlgorithmID.SHA512">
+            <summary>
+            SHA 512 (only xlsx)
             </summary>
         </member>
         <member name="T:Bytescout.MSCompoundFile.CompoundFile">
