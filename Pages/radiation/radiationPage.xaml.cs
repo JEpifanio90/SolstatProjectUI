@@ -216,7 +216,7 @@ namespace SolstatProjectUI.Pages.radiation
                 textBox.Background = (Brush)brush.ConvertFrom("#FFFFFF");
             }
         }
-        
+
         ////////////////////////////////////////
 
 

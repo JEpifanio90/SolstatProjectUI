@@ -58,16 +58,6 @@ namespace SolstatProjectUI.Pages.photovoltaic
             phSecondaryComponent.Dispose();
         }
 
-        private void photoBackBtn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void photoNextBtn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void photoUpdateBtn_Click(object sender, RoutedEventArgs e)
         {
             try

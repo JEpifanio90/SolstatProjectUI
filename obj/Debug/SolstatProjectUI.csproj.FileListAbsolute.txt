@@ -39,3 +39,5 @@ C:\Users\jose-\Desktop\Programming\CSharp\SolstatProjectUI\bin\Debug\Bytescout.S
 C:\Users\jose-\Desktop\Programming\CSharp\SolstatProjectUI\obj\Debug\SolstatProjectUI_Content.g.cs
 C:\Users\jose-\Desktop\Programming\CSharp\SolstatProjectUI\obj\Debug\Pages\costs\costsPage.baml
 C:\Users\jose-\Desktop\Programming\CSharp\SolstatProjectUI\obj\Debug\Pages\costs\costsPage.g.cs
+C:\Users\jose-\Desktop\Programming\CSharp\SolstatProjectUI\obj\Debug\Pages\arrays\arraysPage.baml
+C:\Users\jose-\Desktop\Programming\CSharp\SolstatProjectUI\obj\Debug\Pages\arrays\arraysPage.g.cs

@@ -15,6 +15,7 @@
                 <mui:Link DisplayName="Radiación" Source="/Pages/radiation/radiationPage.xaml" />
                 <mui:Link DisplayName="Fotovoltaíco" Source="/Pages/photovoltaic/photovoltaicPage.xaml" />
                 <mui:Link DisplayName="Termosolar" Source="/Pages/thermosolar/thermosolarPage.xaml" />
+                <mui:Link DisplayName="Arreglos" Source="/Pages/arrays/arraysPage.xaml" />
                 <mui:Link DisplayName="Evaluación Económica" Source="/Pages/costs/costsPage.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>

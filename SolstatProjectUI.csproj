@@ -97,6 +97,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\arrays\arraysPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\costs\costsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -120,6 +124,9 @@
     <Compile Include="Models\photosecondarycomponent.cs" />
     <Compile Include="Models\thermocomponent.cs" />
     <Compile Include="Models\thermosecondarycomponent.cs" />
+    <Compile Include="Pages\arrays\arraysPage.xaml.cs">
+      <DependentUpon>arraysPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\costs\costsPage.xaml.cs">
       <DependentUpon>costsPage.xaml</DependentUpon>
     </Compile>
@@ -170,9 +177,7 @@
     <None Include="ExcelFiles\thermoComponents.xlsx" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pages\arrays\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="BackupDB\countiesLocations.sql" />
     <Content Include="BackupDB\solstatdb.sql" />

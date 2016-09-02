@@ -47,8 +47,6 @@
                 </ListView.View>
             </ListView>
         </GroupBox>
-        <Button x:Name="photoNextBtn" Content="Siguiente" HorizontalAlignment="Left" Margin="673,461,0,0" VerticalAlignment="Top" Width="98" Click="photoNextBtn_Click"/>
-        <Button x:Name="photoBackBtn" Content="Anterior" HorizontalAlignment="Left" Margin="529,461,0,0" VerticalAlignment="Top" Width="95" Click="photoBackBtn_Click"/>
         <Button x:Name="photoUpdateBtn" Content="Actualizar BD" HorizontalAlignment="Left" Margin="10,461,0,0" VerticalAlignment="Top" Width="183" Click="photoUpdateBtn_Click"/>
     </Grid>
 </UserControl>

@@ -44,8 +44,6 @@
                 </ListView.View>
             </ListView>
         </GroupBox>
-        <Button x:Name="thermoNextBtn" Content="Siguiente" HorizontalAlignment="Left" Margin="676,449,0,0" VerticalAlignment="Top" Width="106" Click="thermoNextBtn_Click"/>
-        <Button x:Name="thermoBackBtn" Content="Anterior" HorizontalAlignment="Left" Margin="491,449,0,0" VerticalAlignment="Top" Width="112" Click="thermoBackBtn_Click"/>
         <Button x:Name="thermoUpdateBtn" Content="Actualizar BD" HorizontalAlignment="Left" Margin="22,449,0,0" VerticalAlignment="Top" Width="175" Click="thermoUpdateBtn_Click"/>
     </Grid>
 </UserControl>

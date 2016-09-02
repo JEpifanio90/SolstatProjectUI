@@ -56,12 +56,7 @@ namespace SolstatProjectUI.Pages.thermosolar
                 secondaryComponentListThermo.Items.Add(new SecondaryThermoComponents() { id = int.Parse(thermoResult.id.ToString()), component = thermoResult.components.ToString(), comments = thermoResult.comments.ToString(), efficiency = double.Parse(thermoResult.efficiency.ToString()), brandName = brandName.First<string>().ToString() });
             }
         }
-
-        private void thermoBackBtn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+        
         private void thermoUpdateBtn_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -102,11 +97,6 @@ namespace SolstatProjectUI.Pages.thermosolar
                 ModernDialog.ShowMessage("Archivo no seleccionado." + ex.GetType().ToString(), "¡Error de archivo!!", System.Windows.MessageBoxButton.OK);
             }
             fillBrands();
-        }
-
-        private void thermoNextBtn_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void secondaryComponentListThermo_SelectionChanged(object sender, SelectionChangedEventArgs e)
