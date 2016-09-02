@@ -47,6 +47,8 @@
                 </ListView.View>
             </ListView>
         </GroupBox>
-        <Button x:Name="photoUpdateBtn" Content="Actualizar BD" HorizontalAlignment="Left" Margin="10,461,0,0" VerticalAlignment="Top" Width="183" Click="photoUpdateBtn_Click"/>
+        <Button x:Name="photoUpdateBtn" Content="Actualizar BD" HorizontalAlignment="Left" Margin="10,454,0,0" VerticalAlignment="Top" Width="183" Click="photoUpdateBtn_Click"/>
+        <Button x:Name="photoBackBtn" Content="Regresar" Command="mui:LinkCommands.NavigateLink" CommandParameter="/Pages/radiation/radiationPage.xaml" HorizontalAlignment="Left" Margin="477,454,0,0" VerticalAlignment="Top" Width="129"/>
+        <Button x:Name="photoNextBtn" Content="Siguiente" Command="mui:LinkCommands.NavigateLink" CommandParameter="/Pages/arrays/arraysPage.xaml" HorizontalAlignment="Left" Margin="642,454,0,0" VerticalAlignment="Top" Width="129"/>
     </Grid>
 </UserControl>

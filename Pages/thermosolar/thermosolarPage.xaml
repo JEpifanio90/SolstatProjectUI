@@ -44,6 +44,8 @@
                 </ListView.View>
             </ListView>
         </GroupBox>
-        <Button x:Name="thermoUpdateBtn" Content="Actualizar BD" HorizontalAlignment="Left" Margin="22,449,0,0" VerticalAlignment="Top" Width="175" Click="thermoUpdateBtn_Click"/>
+        <Button x:Name="thermoUpdateBtn" Content="Actualizar BD" HorizontalAlignment="Left" Margin="22,444,0,0" VerticalAlignment="Top" Width="175" Click="thermoUpdateBtn_Click"/>
+        <Button x:Name="thermoBackBtn" Content="Regresar" Command="mui:LinkCommands.NavigateLink" CommandParameter="/Pages/radiation/radiationPage.xaml" HorizontalAlignment="Left" Margin="467,444,0,0" VerticalAlignment="Top" Width="136"/>
+        <Button x:Name="thermoNextBtn" Content="Siguiente" Command="mui:LinkCommands.NavigateLink" CommandParameter="/Pages/arrays/arraysPage.xaml" HorizontalAlignment="Left" Margin="646,444,0,0" VerticalAlignment="Top" Width="136"/>
     </Grid>
 </UserControl>

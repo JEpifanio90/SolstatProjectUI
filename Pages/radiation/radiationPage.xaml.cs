@@ -32,6 +32,8 @@ namespace SolstatProjectUI.Pages.radiation
         {
             InitializeComponent();
             fillCounties();
+            startDate.SelectedDate = DateTime.Today;
+            endDate.SelectedDate = DateTime.Today.AddMonths(1);
         }
 
         public void fillCounties()
@@ -55,7 +57,7 @@ namespace SolstatProjectUI.Pages.radiation
             }
             catch(Exception exc)
             {
-                ModernDialog.ShowMessage("Hubo un error en la base de datos. Tipo de error: " + exc.GetType().ToString(), "¡Error!", System.Windows.MessageBoxButton.OK);
+                ModernDialog.ShowMessage("Hubo un error en la base de datos. Tipo de error: " + exc.GetType().ToString(), "¡Error!", MessageBoxButton.OK);
             }
         }
 
@@ -95,34 +97,19 @@ namespace SolstatProjectUI.Pages.radiation
             var brush = new BrushConverter();
             longitudeTB.Background = (Brush)brush.ConvertFrom("#FFFFFF");
             latitudeTB.Background = (Brush)brush.ConvertFrom("#FFFFFF");
-            if (!startDate.SelectedDate.HasValue || !endDate.SelectedDate.HasValue)
+            startDate.Background = (Brush)brush.ConvertFrom("#FFFFFF");
+            endDate.Background = (Brush)brush.ConvertFrom("#FFFFFF");
+            try
             {
-                startDate.Background = (Brush)brush.ConvertFrom("#FF3333");
-                endDate.Background = (Brush)brush.ConvertFrom("#FF3333");
-                MessageBox.Show("Check your Start Date and End Date", "Warning", MessageBoxButton.OK);
+                latitude = Double.Parse(latitudeTB.Text.ToString());
+                longitude = Double.Parse(longitudeTB.Text.ToString());
+                results res = new results(startDate.SelectedDate.Value, endDate.SelectedDate.Value, latitude, longitude);
             }
-            else
+            catch (Exception exc)
             {
-                startDate.Background = (Brush)brush.ConvertFrom("#FFFFFF");
-                endDate.Background = (Brush)brush.ConvertFrom("#FFFFFF");
-                try
-                {
-                    latitude = Double.Parse(latitudeTB.Text.ToString());
-                    longitude = Double.Parse(longitudeTB.Text.ToString());
-                    results res = new results(startDate.SelectedDate.Value, endDate.SelectedDate.Value, latitude, longitude);
-                    Dictionary<string, string> costValues = new Dictionary<string, string>();
-                    costValues.Add("generatedEnergy", res.getH0().ToString());
-                    costValues.Add("totalYears", res.getYears().ToString());
-                    costValues.Add("startDate", startDate.SelectedDate.Value.ToString());
-                    costValues.Add("endDate", endDate.SelectedDate.Value.ToString());
-                    //TODO: find  a way to transfer this dictionary to the costs view.
-                }
-                catch (Exception exc)
-                {
-                    longitudeTB.Background = (Brush)brush.ConvertFrom("#FF3333");
-                    latitudeTB.Background = (Brush)brush.ConvertFrom("#FF3333");
-                    MessageBox.Show("Check your coordinates" + exc.ToString(), "Warning", MessageBoxButton.OK);
-                }
+                longitudeTB.Background = (Brush)brush.ConvertFrom("#FF3333");
+                latitudeTB.Background = (Brush)brush.ConvertFrom("#FF3333");
+                ModernDialog.ShowMessage("Check your coordinates" + exc.ToString(), "Warning", MessageBoxButton.OK);
             }
         }
 
