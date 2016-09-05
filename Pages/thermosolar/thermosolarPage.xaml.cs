@@ -25,12 +25,13 @@ namespace SolstatProjectUI.Pages.thermosolar
     /// </summary>
     public partial class thermosolarPage : UserControl
     {
+        public static Dictionary<String, Dictionary<String, String>> thermosolarData { get; set; }
         public thermosolarPage()
         {
             InitializeComponent();
+            thermosolarData = new Dictionary<String, Dictionary<String,String>>();
             fillBrands();
         }
-
         //TAB 3 THERMO
         private void mainComponentListThermo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -104,13 +105,22 @@ namespace SolstatProjectUI.Pages.thermosolar
             SecondaryThermoComponents selectedItem = (SecondaryThermoComponents)secondaryComponentListThermo.SelectedItem;
             //outputListThermo.Items.Clear(); --> Uncomment if the user wants a single element 
             outputListThermo.Items.Add(new SecondaryThermoComponents() { id = selectedItem.id, brandName = selectedItem.brandName, efficiency = selectedItem.efficiency });
+            fillDictionary();
         }
-        /// <summary>
-        ///  First check if the brand exists. If it does it returns the ID of that one, if doesn't exist 
-        ///  it will insert it to the DB and return the ID
-        /// </summary>
-        /// <param cell="brandCell"></param>
-        /// <returns>brandID</returns>
+
+        private void fillDictionary()
+        {
+            thermosolarData.Clear();
+            Dictionary<String, String> componentData = new Dictionary<String, String>();
+            foreach (SecondaryThermoComponents component in outputListThermo.Items)
+            {
+                componentData.Add("brandName", component.brandName.ToString());
+                componentData.Add("efficiency", component.efficiency.ToString());
+                //componentData.Add("price", component.price.ToString());
+                thermosolarData.Add(component.id.ToString(), componentData);
+            }
+        }
+
         public int insertBrandToDB(Cell brandCell)
         {
             int brandID = 0;

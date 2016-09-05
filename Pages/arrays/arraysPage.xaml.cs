@@ -23,6 +23,8 @@ namespace SolstatProjectUI.Pages.arrays
         public arraysPage()
         {
             InitializeComponent();
+
+            
         }
     }
 }

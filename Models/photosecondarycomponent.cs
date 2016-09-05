@@ -36,5 +36,7 @@ namespace SolstatProject.Models
         public string monitoring_system { get; set; }
 
         public int panelID { get; set; }
+
+        public int price { get; set; }
     }
 }

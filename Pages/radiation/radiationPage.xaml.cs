@@ -27,7 +27,8 @@ namespace SolstatProjectUI.Pages.radiation
     public partial class radiationPage : UserControl
     {
         public Dictionary<string, string> countyCoordinatesList = new Dictionary<string, string>(); //<---There should be a way to avoid this
-        public Dictionary<string, string> resultInfo = new Dictionary<string, string>(); //<---- and this ... and yo' face.
+        public static Dictionary<String, String> costsData { get; set; }
+
         public radiationPage()
         {
             InitializeComponent();
@@ -104,6 +105,12 @@ namespace SolstatProjectUI.Pages.radiation
                 latitude = Double.Parse(latitudeTB.Text.ToString());
                 longitude = Double.Parse(longitudeTB.Text.ToString());
                 results res = new results(startDate.SelectedDate.Value, endDate.SelectedDate.Value, latitude, longitude);
+                costsData = new Dictionary<String, String>();
+                costsData.Add("startDate", startDate.SelectedDate.Value.ToString());
+                costsData.Add("endDate", endDate.SelectedDate.Value.ToString());
+                costsData.Add("producedEnergy", res.getH0().ToString());
+                costsData.Add("totalYears", res.getDays().ToString());
+
             }
             catch (Exception exc)
             {
@@ -205,6 +212,8 @@ namespace SolstatProjectUI.Pages.radiation
         }
 
         ////////////////////////////////////////
+
+        
 
 
     }

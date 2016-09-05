@@ -25,12 +25,13 @@ namespace SolstatProjectUI.Pages.photovoltaic
     /// </summary>
     public partial class photovoltaicPage : UserControl
     {
+        public static Dictionary<String, Dictionary<String, String>> photovoltaicData { get; set; }
         public photovoltaicPage()
         {
             InitializeComponent();
+            photovoltaicData = new Dictionary<string, Dictionary<String, String>>();
             fillPanels();
         }
-
         //TAB 2 PHOTOVOLTAIC
         private void mainComponentListPhoto_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -110,14 +111,25 @@ namespace SolstatProjectUI.Pages.photovoltaic
         {
             SecondaryPhotoComponents selectedComponent = (SecondaryPhotoComponents)secondaryComponentListPhoto.SelectedItem;
             outputListPhoto.Items.Add(new SecondaryPhotoComponents() { id = selectedComponent.id, panelName = selectedComponent.panelName, model = selectedComponent.model });
+            //outputListPhoto.Items.
+            fillDictionary();
         }
 
-        /// <summary>
-        ///  First check if the panel exists. If it does it returns the ID of that one, if doesn't exist 
-        ///  it will insert it to the DB and return the ID
-        /// </summary>
-        /// <param Cell="panelCell"></param>
-        /// <returns>panelID</returns>
+        private void fillDictionary()
+        {
+            photovoltaicData.Clear();
+            Dictionary<String, String> componentData = new Dictionary<String, String>();
+            foreach (SecondaryPhotoComponents component in outputListPhoto.Items)
+            {
+                componentData.Add("panelName", component.panelName.ToString());
+                componentData.Add("model", component.model.ToString());
+                componentData.Add("monitoring_system", component.monitoring_system.ToString());
+                componentData.Add("regulator", component.regulator.ToString());
+                componentData.Add("inverter", component.inverter.ToString());
+                //componentData.Add("price", component.inverter.ToString());
+                photovoltaicData.Add(component.id.ToString(), componentData);
+            }
+        }
 
         public int insertPanelToDB(Cell panelCell)
         {

@@ -22,5 +22,7 @@ namespace SolstatProject.Models
         public string comments { get; set; }
 
         public int? brandID { get; set; }
+
+        public int price { get; set; }
     }
 }
