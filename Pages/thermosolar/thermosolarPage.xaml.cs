@@ -111,9 +111,9 @@ namespace SolstatProjectUI.Pages.thermosolar
         private void fillDictionary()
         {
             thermosolarData.Clear();
-            Dictionary<String, String> componentData = new Dictionary<String, String>();
             foreach (SecondaryThermoComponents component in outputListThermo.Items)
             {
+                Dictionary<String, String> componentData = new Dictionary<String, String>();
                 componentData.Add("brandName", component.brandName.ToString());
                 componentData.Add("efficiency", component.efficiency.ToString());
                 //componentData.Add("price", component.price.ToString());

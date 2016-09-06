@@ -118,14 +118,14 @@ namespace SolstatProjectUI.Pages.photovoltaic
         private void fillDictionary()
         {
             photovoltaicData.Clear();
-            Dictionary<String, String> componentData = new Dictionary<String, String>();
             foreach (SecondaryPhotoComponents component in outputListPhoto.Items)
             {
+                Dictionary<String, String> componentData = new Dictionary<String, String>();
                 componentData.Add("panelName", component.panelName.ToString());
                 componentData.Add("model", component.model.ToString());
-                componentData.Add("monitoring_system", component.monitoring_system.ToString());
-                componentData.Add("regulator", component.regulator.ToString());
-                componentData.Add("inverter", component.inverter.ToString());
+                //componentData.Add("monitoring_system", component.monitoring_system.ToString());
+                //componentData.Add("regulator", component.regulator.ToString());
+                //componentData.Add("inverter", component.inverter.ToString());
                 //componentData.Add("price", component.inverter.ToString());
                 photovoltaicData.Add(component.id.ToString(), componentData);
             }

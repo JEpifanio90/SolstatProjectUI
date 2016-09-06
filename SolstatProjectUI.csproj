@@ -88,6 +88,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="HelperClasses\genericComponent.cs" />
     <Compile Include="HelperClasses\MainPhotoComponent.cs" />
     <Compile Include="HelperClasses\MainThermoComponent.cs" />
     <Compile Include="HelperClasses\results.cs" />
@@ -117,7 +118,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\components_EE.cs" />
     <Compile Include="Models\countieslocation.cs" />
     <Compile Include="Models\DataModel.cs" />
