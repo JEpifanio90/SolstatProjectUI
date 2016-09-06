@@ -8,16 +8,15 @@
              d:DesignHeight="546.829" d:DesignWidth="824.146">
     <Grid Style="{StaticResource ContentRoot}">
 
-        <Label x:Name="labelInversion" HorizontalContentAlignment="Right"  Height="40"  Content="Inversión inicial:" HorizontalAlignment="Left" Margin="46,184,0,0" VerticalAlignment="Top" Width="120" />
-        <TextBox x:Name="inversionInicialTxt" Height="40" TextWrapping="Wrap" Text="" Width="150"  Margin="166,163,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Label x:Name="labelInteres" HorizontalContentAlignment="Right" Height="40"  Content="Interes:" HorizontalAlignment="Left" Margin="369,184,0,0" VerticalAlignment="Top" Width="120" />
-        <TextBox x:Name="interesTxt" Height="40" TextWrapping="Wrap" Text="" Width="150"  Margin="499,163,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="labelInversion" HorizontalContentAlignment="Right"  Height="40"  Content="Inversión inicial:" HorizontalAlignment="Left" Margin="0,30,0,0" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="inversionInicialTxt" Height="40" TextWrapping="Wrap" Text="" Width="150"  Margin="120,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="labelTasaDescuento" HorizontalContentAlignment="Right" Height="40"  Content="Tasa de descuento:" HorizontalAlignment="Left" Margin="350,30,0,0" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="tasaDescuentoTxt" Height="40" TextWrapping="Wrap" Text="" Width="150"  Margin="470,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
-        <Label x:Name="labelPeriodo" HorizontalContentAlignment="Right"  Height="40"  Content="Perdiodo:" HorizontalAlignment="Left" Margin="46,234,0,0" VerticalAlignment="Top" Width="120" />
-        <TextBox x:Name="periodoTxt" Height="40" TextWrapping="Wrap" Text="" Width="150"  Margin="166,214,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" IsReadOnly="True"/>
-        <Label x:Name="labelOtro" HorizontalContentAlignment="Right" Height="40"  Content="Interes:" HorizontalAlignment="Left" Margin="369,234,0,0" VerticalAlignment="Top" Width="120" />
-        <TextBox x:Name="otroTxt" Height="40" TextWrapping="Wrap" Text="" Width="150"  Margin="499,214,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="labelVPN" HorizontalContentAlignment="Right"  Height="40"  Content="VPN:" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="vpnTxt" Height="40" TextWrapping="Wrap" Text="" Width="150"  Margin="120,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" IsReadOnly="True"/>
+
+        <Button x:Name="calculateVPN" Content="Calcular VPN" HorizontalAlignment="Left" Margin="470,70,0,0" VerticalAlignment="Top" Width="150" Click="calculateVPN_Click" />
         <Button x:Name="components_eeUpdateBtn" Content="Actualizar BD" HorizontalAlignment="Left" Margin="35,420,0,0" VerticalAlignment="Top" Width="183" Click="components_eeUpdateBtn_Click"/>
-
     </Grid>
 </UserControl>

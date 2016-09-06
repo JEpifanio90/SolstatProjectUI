@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SolstatProjectUI.HelperClasses;
 
 namespace SolstatProjectUI.Pages.costs
 {
@@ -23,6 +24,8 @@ namespace SolstatProjectUI.Pages.costs
     /// </summary>
     public partial class costsPage : UserControl
     {
+        private EvaluacionEconomicaServices _EEService = new EvaluacionEconomicaServices();
+
         public costsPage()
         {
             InitializeComponent();
@@ -88,6 +91,13 @@ namespace SolstatProjectUI.Pages.costs
                 MessageBox.Show("Hubo un error con al actualizar la base de datos. Tipo de error: " + error.GetType().ToString(), "¡Error!", MessageBoxButton.OK);
 
             }
+        }
+        private void calculateVPN_Click(object sender, RoutedEventArgs e)
+        {
+            double discountRate = double.Parse(tasaDescuentoTxt.Text);
+            List<double> incomes = _EEService.CalculateIncomes(100);
+            double vpn = _EEService.CalculateVPN(1000, incomes, (discountRate / 100));
+            vpnTxt.Text = vpn.ToString();
         }
         /////////////////////////////////////////
 
