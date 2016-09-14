@@ -67,7 +67,7 @@ namespace SolstatProjectUI.Pages.thermosolar
                 Worksheet workSheet = document.Workbook.Worksheets.ByName("Components");
                 int brandID = 0;
                 double efficiencyExcel;
-                string componentsExcel = " ", commentsExcel = " ";
+                string componentsExcel = " ", commentsExcel = " ", componentPrice = " ";
                 DataModel context = new DataModel();
                 for (int i = 2; i < workSheet.UsedRangeRowMax; i++)
                 {
@@ -76,13 +76,15 @@ namespace SolstatProjectUI.Pages.thermosolar
                         brandID = insertBrandToDB(workSheet.Cell("A" + i));
                         efficiencyExcel = (!String.IsNullOrEmpty(workSheet.Cell("B" + i).ToString())) ? double.Parse(workSheet.Cell("B" + i).ToString().Replace("%", " ")) : 0.00;
                         componentsExcel = (!String.IsNullOrEmpty(workSheet.Cell("C" + i).ToString())) ? workSheet.Cell("C" + i).ToString() : " ";
-                        commentsExcel = (!String.IsNullOrEmpty(workSheet.Cell("C" + i).ToString())) ? workSheet.Cell("C" + i).ToString() : " ";
+                        commentsExcel = (!String.IsNullOrEmpty(workSheet.Cell("D" + i).ToString())) ? workSheet.Cell("D" + i).ToString() : " ";
+                        componentPrice = (!String.IsNullOrEmpty(workSheet.Cell("E" + i).ToString())) ? workSheet.Cell("E" + i).ToString() : "0";
                         thermosecondarycomponent secondThComp = new thermosecondarycomponent
                         {
                             brandID = brandID,
                             comments = commentsExcel,
                             components = componentsExcel,
-                            efficiency = efficiencyExcel
+                            efficiency = efficiencyExcel,
+                            price = int.Parse(componentPrice)
                         };
                         context.thermosecondarycomponents.Add(secondThComp);
                         context.SaveChanges();
@@ -104,7 +106,7 @@ namespace SolstatProjectUI.Pages.thermosolar
         {
             SecondaryThermoComponents selectedItem = (SecondaryThermoComponents)secondaryComponentListThermo.SelectedItem;
             //outputListThermo.Items.Clear(); --> Uncomment if the user wants a single element 
-            outputListThermo.Items.Add(new SecondaryThermoComponents() { id = selectedItem.id, brandName = selectedItem.brandName, efficiency = selectedItem.efficiency });
+            outputListThermo.Items.Add(new SecondaryThermoComponents() { id = selectedItem.id, brandName = selectedItem.brandName, efficiency = selectedItem.efficiency, price = selectedItem.price });
             fillDictionary();
         }
 
@@ -116,7 +118,7 @@ namespace SolstatProjectUI.Pages.thermosolar
                 Dictionary<String, String> componentData = new Dictionary<String, String>();
                 componentData.Add("brandName", component.brandName.ToString());
                 componentData.Add("efficiency", component.efficiency.ToString());
-                //componentData.Add("price", component.price.ToString());
+                componentData.Add("price", component.price.ToString());
                 thermosolarData.Add(component.id.ToString(), componentData);
             }
         }

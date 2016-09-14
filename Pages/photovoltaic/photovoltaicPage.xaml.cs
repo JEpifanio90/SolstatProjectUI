@@ -67,7 +67,7 @@ namespace SolstatProjectUI.Pages.photovoltaic
                 document.LoadFromFile(System.IO.Path.GetFullPath(showDialogAndGetFilePath()));
                 Worksheet workSheet = document.Workbook.Worksheets.ByName("Components");
                 int panelID = 0;
-                string models, inversor, regulator, batery, bidirectional_meter, monitoring_system;
+                string models, inversor, regulator, batery, bidirectional_meter, monitoring_system, componentPrice;
                 DataModel context = new DataModel();
                 for (int i = 2; i < workSheet.UsedRangeRowMax; i++)
                 {
@@ -80,6 +80,7 @@ namespace SolstatProjectUI.Pages.photovoltaic
                         batery = (!String.IsNullOrEmpty(workSheet.Cell("E" + i).ToString())) ? workSheet.Cell("E" + i).ToString() : " ";
                         bidirectional_meter = (!String.IsNullOrEmpty(workSheet.Cell("F" + i).ToString())) ? workSheet.Cell("F" + i).ToString() : " ";
                         monitoring_system = (!String.IsNullOrEmpty(workSheet.Cell("G" + i).ToString())) ? workSheet.Cell("G" + i).ToString() : " ";
+                        componentPrice = (!String.IsNullOrEmpty(workSheet.Cell("H" + i).ToString())) ? workSheet.Cell("H" + i).ToString() : "0";
                         photosecondarycomponent secondThComp = new photosecondarycomponent
                         {
                             panelID = panelID,
@@ -88,7 +89,9 @@ namespace SolstatProjectUI.Pages.photovoltaic
                             regulator = regulator,
                             batery = batery,
                             C_bidirectional_meter = bidirectional_meter,
-                            monitoring_system = monitoring_system
+                            monitoring_system = monitoring_system,
+                            price = int.Parse(componentPrice)
+
                         };
                         context.photosecondarycomponents.Add(secondThComp);
                         context.SaveChanges();
@@ -110,7 +113,7 @@ namespace SolstatProjectUI.Pages.photovoltaic
         private void secondaryComponentListPhoto_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             SecondaryPhotoComponents selectedComponent = (SecondaryPhotoComponents)secondaryComponentListPhoto.SelectedItem;
-            outputListPhoto.Items.Add(new SecondaryPhotoComponents() { id = selectedComponent.id, panelName = selectedComponent.panelName, model = selectedComponent.model });
+            outputListPhoto.Items.Add(new SecondaryPhotoComponents() { id = selectedComponent.id, panelName = selectedComponent.panelName, model = selectedComponent.model, price = selectedComponent.price});
             //outputListPhoto.Items.
             fillDictionary();
         }
@@ -126,7 +129,7 @@ namespace SolstatProjectUI.Pages.photovoltaic
                 //componentData.Add("monitoring_system", component.monitoring_system.ToString());
                 //componentData.Add("regulator", component.regulator.ToString());
                 //componentData.Add("inverter", component.inverter.ToString());
-                //componentData.Add("price", component.inverter.ToString());
+                componentData.Add("price", component.price.ToString());
                 photovoltaicData.Add(component.id.ToString(), componentData);
             }
         }

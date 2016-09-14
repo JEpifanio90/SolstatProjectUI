@@ -7,8 +7,8 @@
              mc:Ignorable="d" 
               d:DesignHeight="546.829" d:DesignWidth="824.146">
     <Grid Style="{StaticResource ContentRoot}">
-        <GroupBox x:Name="groupBox" Header="GroupBox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="394" Width="772">
-            <ListView x:Name="componentList" HorizontalAlignment="Left" Margin="10,10,0,5.6" Width="735">
+        <GroupBox x:Name="groupBox" Header="GroupBox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="353" Width="663">
+            <ListView x:Name="componentList" HorizontalAlignment="Left" Margin="10,10,0,69.2" Width="611">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="ID" DisplayMemberBinding="{Binding id}" Width="40"/>
@@ -24,11 +24,12 @@
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Header="Total" DisplayMemberBinding="{Binding total}" Width="40"/>
                     </GridView>
                 </ListView.View>
             </ListView>
         </GroupBox>
         <Button x:Name="calculateBtn" Content="Calcular" HorizontalAlignment="Left" Margin="643,431,0,0" VerticalAlignment="Top" Width="139" Height="35" Click="calculateBtn_Click"/>
+        <Label x:Name="totalLabel" Content="TOTAL:" HorizontalAlignment="Left" Margin="190,439,0,0" VerticalAlignment="Top" Height="27" Width="41"/>
+        <TextBox x:Name="totalBox" Text="0.00" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="236,437,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166"/>
     </Grid>
 </UserControl>

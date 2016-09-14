@@ -23,6 +23,6 @@ namespace SolstatProject.Models
 
         public int? brandID { get; set; }
 
-        public int price { get; set; }
+        public double price { get; set; }
     }
 }
