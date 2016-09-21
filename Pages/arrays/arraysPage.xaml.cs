@@ -81,11 +81,10 @@ namespace SolstatProjectUI.Pages.arrays
                 {
                     if ("panelName" == component.Key.ToString() || "brandName" == component.Key.ToString())
                         componentName = component.Value;
-
                     if ("price" == component.Key.ToString())
                         componentPrice = double.Parse(component.Value);
                 }
-                componentList.Items.Add(new genericComponent() { id = idComponent, name = componentName, price = componentPrice, quantity = 1, total = 1*componentPrice});
+                componentList.Items.Add(new genericComponent() { id = idComponent, name = componentName, price = componentPrice });
             }
         }
         
@@ -96,10 +95,11 @@ namespace SolstatProjectUI.Pages.arrays
 
         private void sliderChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            /*Slider sliderRange = sender as Slider;
+            Slider sliderRange = sender as Slider;
             var item = sliderRange.DataContext;
             var component = (genericComponent)item;
-            component.total = 100 * e.NewValue;*/
+            double total = Double.Parse(totalBox.Text.ToString()) + (e.NewValue * component.price);
+            totalBox.Text = total.ToString();
         }
     }
 }

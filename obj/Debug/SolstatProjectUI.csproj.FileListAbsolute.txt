@@ -42,8 +42,6 @@ C:\Users\jose-\Desktop\Programming\CSharp\SolstatProjectUI\obj\Debug\Pages\costs
 C:\Users\jose-\Desktop\Programming\CSharp\SolstatProjectUI\obj\Debug\Pages\arrays\arraysPage.baml
 C:\Users\jose-\Desktop\Programming\CSharp\SolstatProjectUI\obj\Debug\Pages\arrays\arraysPage.g.cs
 C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\bin\Debug\SolstatProjectUI.exe.config
-C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\obj\Debug\SolstatProjectUI.exe
-C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\obj\Debug\SolstatProjectUI.pdb
 C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\bin\Debug\SolstatProjectUI.exe
 C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\bin\Debug\SolstatProjectUI.pdb
 C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\bin\Debug\Bytescout.Spreadsheet.dll
@@ -84,3 +82,5 @@ C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\obj\De
 C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\obj\Debug\SolstatProjectUI_Content.g.cs
 C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\obj\Debug\SolstatProjectUI_MarkupCompile.cache
 C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\obj\Debug\SolstatProjectUI.g.resources
+C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\obj\Debug\SolstatProjectUI.exe
+C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\obj\Debug\SolstatProjectUI.pdb

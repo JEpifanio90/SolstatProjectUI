@@ -37,6 +37,6 @@ namespace SolstatProject.Models
 
         public int panelID { get; set; }
 
-        public int price { get; set; }
+        public double price { get; set; }
     }
 }

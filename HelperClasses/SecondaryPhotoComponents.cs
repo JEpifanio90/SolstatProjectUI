@@ -16,5 +16,6 @@ namespace SolstatProjectUI.HelperClasses
         public string bidirectional_meter { get; set; }
         public string monitoring_system { get; set; }
         public string panelName { get; set; }
+        public double price { get; set; }
     }
 }

@@ -13,5 +13,6 @@ namespace SolstatProjectUI.HelperClasses
         public double efficiency { get; set; }
         public string comments { get; set; }
         public string brandName { get; set; }
+        public double price { get; set; }
     }
 }

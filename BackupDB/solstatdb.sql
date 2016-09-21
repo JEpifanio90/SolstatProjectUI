@@ -7411,6 +7411,7 @@ CREATE TABLE IF NOT EXISTS `photosecondarycomponents` (
   `C_bidirectional_meter` varchar(250) NOT NULL,
   `monitoring_system` varchar(250) NOT NULL,
   `panelID` int(11) NOT NULL,
+  `price` double NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=225 ;
 
@@ -7440,6 +7441,7 @@ CREATE TABLE IF NOT EXISTS `thermosecondarycomponents` (
   `efficiency` double NOT NULL,
   `comments` varchar(250) NOT NULL,
   `brandID` int(11) DEFAULT NULL,
+  `price` double NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1002 ;
 
