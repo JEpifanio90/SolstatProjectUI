@@ -54,7 +54,7 @@ namespace SolstatProjectUI.Pages.photovoltaic
             var panelName = from panelInfo in phSecondaryComponent.photocomponents where panelInfo.id == panelID select panelInfo.panels;
             foreach (var photoResult in query.ToList())
             {
-                secondaryComponentListPhoto.Items.Add(new SecondaryPhotoComponents() { id = int.Parse(photoResult.id.ToString()), model = photoResult.models.ToString(), inverter = photoResult.inverter.ToString(), regulator = photoResult.regulator.ToString(), batery = photoResult.batery.ToString(), bidirectional_meter = photoResult.C_bidirectional_meter.ToString(), monitoring_system = photoResult.monitoring_system.ToString(), panelName = panelName.First<string>() });
+                secondaryComponentListPhoto.Items.Add(new SecondaryPhotoComponents() { id = int.Parse(photoResult.id.ToString()), model = photoResult.models.ToString(), inverter = photoResult.inverter.ToString(), regulator = photoResult.regulator.ToString(), batery = photoResult.batery.ToString(), bidirectional_meter = photoResult.C_bidirectional_meter.ToString(), monitoring_system = photoResult.monitoring_system.ToString(), panelName = panelName.First<string>(),price=photoResult.price });
             }
             phSecondaryComponent.Dispose();
         }

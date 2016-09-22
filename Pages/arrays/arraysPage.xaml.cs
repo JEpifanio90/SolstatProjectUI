@@ -99,6 +99,7 @@ namespace SolstatProjectUI.Pages.arrays
             var item = sliderRange.DataContext;
             var component = (genericComponent)item;
             double total = Double.Parse(totalBox.Text.ToString()) + (e.NewValue * component.price);
+            EvaluacionEconomicaServices.InitialInvestment = total;
             totalBox.Text = total.ToString();
         }
     }

@@ -107,6 +107,7 @@ namespace SolstatProjectUI.Pages.radiation
                 results res = new results(startDate.SelectedDate.Value, endDate.SelectedDate.Value, latitude, longitude);
                 EvaluacionEconomicaServices.startDate = startDate.SelectedDate.Value;
                 EvaluacionEconomicaServices.endDate = endDate.SelectedDate.Value;
+                EvaluacionEconomicaServices.EnergyProduction = res.getH0();
                 costsData = new Dictionary<String, String>();
                 costsData.Add("startDate", startDate.SelectedDate.Value.ToString());
                 costsData.Add("endDate", endDate.SelectedDate.Value.ToString());
