@@ -18,6 +18,7 @@ namespace SolstatProjectUI.HelperClasses
         public static DateTime endDate { get; set; }
         public static double InitialInvestment { get; set; }
         public static double EnergyProduction { get; set; }
+        public static double EnergyPrice { get; set; }
         public EvaluacionEconomicaServices()
         {
             _vpn = 0;
@@ -48,7 +49,7 @@ namespace SolstatProjectUI.HelperClasses
             
             for(int i = 0; i < months; i++)
             {
-                result.Add(avgEnergyPerMonth * 1000);
+                result.Add(avgEnergyPerMonth * EnergyPrice);
             }
             
 

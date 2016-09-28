@@ -54,7 +54,7 @@ namespace SolstatProjectUI.Pages.thermosolar
             var brandName = from brandInfo in thSecondaryComponent.thermocomponents where brandInfo.id == brandID select brandInfo.brand;
             foreach (var thermoResult in query.ToList())
             {
-                secondaryComponentListThermo.Items.Add(new SecondaryThermoComponents() { id = int.Parse(thermoResult.id.ToString()), component = thermoResult.components.ToString(), comments = thermoResult.comments.ToString(), efficiency = double.Parse(thermoResult.efficiency.ToString()), brandName = brandName.First<string>().ToString() });
+                secondaryComponentListThermo.Items.Add(new SecondaryThermoComponents() { id = int.Parse(thermoResult.id.ToString()), component = thermoResult.components.ToString(), comments = thermoResult.comments.ToString(), efficiency = double.Parse(thermoResult.efficiency.ToString()), brandName = brandName.First<string>().ToString(),price=thermoResult.price });
             }
         }
         

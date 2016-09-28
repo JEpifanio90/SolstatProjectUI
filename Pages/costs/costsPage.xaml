@@ -14,9 +14,12 @@
         <TextBox x:Name="tasaDescuentoTxt" Height="40" TextWrapping="Wrap" Text="" Width="150"  Margin="470,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
         <Label x:Name="labelVPN" HorizontalContentAlignment="Right"  Height="40"  Content="VPN:" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Width="120" />
-        <TextBox x:Name="vpnTxt" Height="40" TextWrapping="Wrap" Text="" Width="150"  Margin="120,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" IsReadOnly="True"/>
+        <TextBox x:Name="vpnTxt" Height="40" TextWrapping="Wrap" Text="" Width="150"  Margin="120,70,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" IsReadOnly="True"/>
+        
+        <Label x:Name="precioEner" HorizontalContentAlignment="Right"  Height="40"  Content="Costo energia:" HorizontalAlignment="Left" Margin="340,80,0,0" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="precioTxt" Height="40" TextWrapping="Wrap" Text="" Width="150"  Margin="470,70,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
-        <Button x:Name="calculateVPN" Content="Calcular VPN" HorizontalAlignment="Left" Margin="470,70,0,0" VerticalAlignment="Top" Width="150" Click="calculateVPN_Click" />
+        <Button x:Name="calculateVPN" Content="Calcular VPN" HorizontalAlignment="Left" Margin="470,170,0,0" VerticalAlignment="Top" Width="150" Click="calculateVPN_Click" />
         <Button x:Name="components_eeUpdateBtn" Content="Actualizar BD" HorizontalAlignment="Left" Margin="35,420,0,0" VerticalAlignment="Top" Width="183" Click="components_eeUpdateBtn_Click"/>
     </Grid>
 </UserControl>

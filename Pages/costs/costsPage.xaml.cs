@@ -29,6 +29,8 @@ namespace SolstatProjectUI.Pages.costs
         public costsPage()
         {
             InitializeComponent();
+            inversionInicialTxt.Text = EvaluacionEconomicaServices.EnergyPrice.ToString();
+
         }
 
         //TAB 5 Costos
@@ -95,6 +97,8 @@ namespace SolstatProjectUI.Pages.costs
         private void calculateVPN_Click(object sender, RoutedEventArgs e)
         {
             double discountRate = double.Parse(tasaDescuentoTxt.Text);
+            
+            EvaluacionEconomicaServices.EnergyPrice= double.Parse(precioTxt.Text);
             List<double> incomes = _EEService.CalculateIncomes(100);
             double vpn = _EEService.CalculateVPN(1000, incomes, (discountRate / 100));
             vpnTxt.Text = vpn.ToString();
