@@ -56,7 +56,6 @@ C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\bin\De
 C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\bin\Debug\FirstFloor.ModernUI.xml
 C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
-C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\obj\Debug\SolstatProjectUI.csprojResolveAssemblyReference.cache
 C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\obj\Debug\MainWindow.baml
 C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\obj\Debug\Pages\arrays\arraysPage.baml
 C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\obj\Debug\Pages\costs\costsPage.baml
@@ -84,3 +83,4 @@ C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\obj\De
 C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\obj\Debug\SolstatProjectUI.g.resources
 C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\obj\Debug\SolstatProjectUI.exe
 C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\obj\Debug\SolstatProjectUI.pdb
+C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\obj\Debug\SolstatProjectUI.csprojResolveAssemblyReference.cache

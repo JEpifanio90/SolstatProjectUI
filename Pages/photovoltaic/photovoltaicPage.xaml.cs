@@ -28,9 +28,12 @@ namespace SolstatProjectUI.Pages.photovoltaic
         public static Dictionary<String, Dictionary<String, String>> photovoltaicData { get; set; }
         public photovoltaicPage()
         {
+            
+
             InitializeComponent();
             photovoltaicData = new Dictionary<string, Dictionary<String, String>>();
             fillPanels();
+            
         }
         //TAB 2 PHOTOVOLTAIC
         private void mainComponentListPhoto_SelectionChanged(object sender, SelectionChangedEventArgs e)

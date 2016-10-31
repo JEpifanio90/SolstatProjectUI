@@ -84,7 +84,7 @@ namespace SolstatProjectUI.Pages.radiation
                     }
                     else
                     {
-                        //Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.",singleCharacter.GetType().Name, singleCharacter,val.GetType().Name, val);
+                        //Console.WriteLine("Conwindow.MenuLinkGroups[0].Links.ElementAt(2)verted the {0} value '{1}' to the {2} value {3}.",singleCharacter.GetType().Name, singleCharacter,val.GetType().Name, val);
                         allDigits = true;
                     }
                 }
@@ -94,12 +94,23 @@ namespace SolstatProjectUI.Pages.radiation
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
+            var window =(ModernWindow) Application.Current.MainWindow;
+
+            var button = (Button)sender;
+            if (button.Name == "thermoButton")
+            {
+                window.MenuLinkGroups[0].Links.Remove(window.MenuLinkGroups[0].Links.Where(q=>q.DisplayName== "Fotovoltaíco").FirstOrDefault());
+            }
+            else {
+                window.MenuLinkGroups[0].Links.Remove(window.MenuLinkGroups[0].Links.Where(q => q.DisplayName == "Termosolar").FirstOrDefault());
+            };
+
             Double latitude = 0.00, longitude = 0.00;
             var brush = new BrushConverter();
             longitudeTB.Background = (Brush)brush.ConvertFrom("#FFFFFF");
             latitudeTB.Background = (Brush)brush.ConvertFrom("#FFFFFF");
             startDate.Background = (Brush)brush.ConvertFrom("#FFFFFF");
-            endDate.Background = (Brush)brush.ConvertFrom("#FFFFFF");
+            //endDate.Background = (Brush)brush.ConvertFrom("#FFFFFF");
             try
             {
                 latitude = Double.Parse(latitudeTB.Text.ToString());

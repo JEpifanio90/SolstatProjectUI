@@ -26,7 +26,7 @@
         <DatePicker x:Name="endDate" HorizontalAlignment="Left" Margin="495,413,0,0" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="label" Content="Start Date" HorizontalAlignment="Left" Margin="407,362,0,0" VerticalAlignment="Top" Width="83"/>
         <Label x:Name="label_Copy" Content="End Date" HorizontalAlignment="Left" Margin="407,410,0,0" VerticalAlignment="Top" Width="74"/>
-        <Button x:Name="SearchButton" Command="mui:LinkCommands.NavigateLink" CommandParameter="/Pages/thermosolar/thermosolarPage.xaml" Content="Termosolar" HorizontalAlignment="Left" Margin="676,457,0,0" VerticalAlignment="Top" Width="112" Height="28" Click="SearchButton_Click"/>
-        <Button x:Name="SearchButton_Copy" Command="mui:LinkCommands.NavigateLink" CommandParameter="/Pages/photovoltaic/photovoltaicPage.xaml" Content="Fotovoltaíco" HorizontalAlignment="Left" Margin="520,457,0,0" VerticalAlignment="Top" Width="112" Height="28" Click="SearchButton_Click"/>
+        <Button x:Name="thermoButton" Command="mui:LinkCommands.NavigateLink" CommandParameter="/Pages/thermosolar/thermosolarPage.xaml" Content="Termosolar" HorizontalAlignment="Left" Margin="676,457,0,0" VerticalAlignment="Top" Width="112" Height="28" Click="SearchButton_Click"/>
+        <Button x:Name="photoButton" Command="mui:LinkCommands.NavigateLink" CommandParameter="/Pages/photovoltaic/photovoltaicPage.xaml" Content="Fotovoltaíco" HorizontalAlignment="Left" Margin="520,457,0,0" VerticalAlignment="Top" Width="112" Height="28" Click="SearchButton_Click"/>
     </Grid>
 </UserControl>

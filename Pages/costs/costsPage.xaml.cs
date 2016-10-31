@@ -29,7 +29,7 @@ namespace SolstatProjectUI.Pages.costs
         public costsPage()
         {
             InitializeComponent();
-            inversionInicialTxt.Text = EvaluacionEconomicaServices.EnergyPrice.ToString();
+            inversionInicialTxt.Text = EvaluacionEconomicaServices.InitialInvestment.ToString();
 
         }
 

@@ -28,7 +28,7 @@
                 </ListView.View>
             </ListView>
         </GroupBox>
-        <Button x:Name="calculateBtn" Content="Calcular" HorizontalAlignment="Left" Margin="643,431,0,0" VerticalAlignment="Top" Width="139" Height="35" Click="calculateBtn_Click"/>
+        <Button x:Name="calculateBtn" Content="Calcular" Command="mui:LinkCommands.NavigateLink" CommandParameter="/Pages/costs/costsPage.xaml" HorizontalAlignment="Left" Margin="643,431,0,0" VerticalAlignment="Top" Width="139" Height="35" Click="calculateBtn_Click"/>
         <Label x:Name="totalLabel" Content="TOTAL:" HorizontalAlignment="Left" Margin="190,439,0,0" VerticalAlignment="Top" Height="27" Width="41"/>
         <TextBox x:Name="totalBox" Text="0.00" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="236,437,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166"/>
     </Grid>

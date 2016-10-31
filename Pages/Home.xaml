@@ -9,7 +9,7 @@
         <ScrollViewer>
             <StackPanel MinWidth="200">
                 <TextBlock>
-                    Some Cool Description
+                    
                 </TextBlock>
             </StackPanel>
         </ScrollViewer>
