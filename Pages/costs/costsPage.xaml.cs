@@ -96,9 +96,18 @@ namespace SolstatProjectUI.Pages.costs
         }
         private void calculateVPN_Click(object sender, RoutedEventArgs e)
         {
-            double discountRate = double.Parse(tasaDescuentoTxt.Text);
-            
-            EvaluacionEconomicaServices.EnergyPrice= double.Parse(precioTxt.Text);
+            double discountRate,ePrice;
+            if(!double.TryParse(tasaDescuentoTxt.Text,out discountRate))
+            {
+                MessageBox.Show("Debes de indicar la tasa de descuenrto", "¡Atención!", MessageBoxButton.OK);
+                return;
+            }
+            if (!double.TryParse(precioTxt.Text, out ePrice)){
+                MessageBox.Show("Debes de indicar el precio de la energia", "¡Atención!", MessageBoxButton.OK);
+                return;
+            }
+
+            EvaluacionEconomicaServices.EnergyPrice = ePrice;
             List<double> incomes = _EEService.CalculateIncomes(100);
             double vpn = _EEService.CalculateVPN(1000, incomes, (discountRate / 100));
             vpnTxt.Text = vpn.ToString();
