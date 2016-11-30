@@ -84,3 +84,46 @@ C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\obj\De
 C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\obj\Debug\SolstatProjectUI.exe
 C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\obj\Debug\SolstatProjectUI.pdb
 C:\Users\AmericaGuisell\Desktop\victor trabajo\radiacion\SolstatProjectUI\obj\Debug\SolstatProjectUI.csprojResolveAssemblyReference.cache
+C:\Users\America\Desktop\victor\SolstatProjectUI\bin\Debug\SolstatProjectUI.exe.config
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\SolstatProjectUI.exe
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\SolstatProjectUI.pdb
+C:\Users\America\Desktop\victor\SolstatProjectUI\bin\Debug\SolstatProjectUI.exe
+C:\Users\America\Desktop\victor\SolstatProjectUI\bin\Debug\SolstatProjectUI.pdb
+C:\Users\America\Desktop\victor\SolstatProjectUI\bin\Debug\Bytescout.Spreadsheet.dll
+C:\Users\America\Desktop\victor\SolstatProjectUI\bin\Debug\EntityFramework.dll
+C:\Users\America\Desktop\victor\SolstatProjectUI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\America\Desktop\victor\SolstatProjectUI\bin\Debug\FirstFloor.ModernUI.dll
+C:\Users\America\Desktop\victor\SolstatProjectUI\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
+C:\Users\America\Desktop\victor\SolstatProjectUI\bin\Debug\MySql.Data.dll
+C:\Users\America\Desktop\victor\SolstatProjectUI\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\America\Desktop\victor\SolstatProjectUI\bin\Debug\Bytescout.Spreadsheet.xml
+C:\Users\America\Desktop\victor\SolstatProjectUI\bin\Debug\EntityFramework.xml
+C:\Users\America\Desktop\victor\SolstatProjectUI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\America\Desktop\victor\SolstatProjectUI\bin\Debug\FirstFloor.ModernUI.xml
+C:\Users\America\Desktop\victor\SolstatProjectUI\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\SolstatProjectUI.csprojResolveAssemblyReference.cache
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\MainWindow.baml
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\Pages\arrays\arraysPage.baml
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\Pages\costs\costsPage.baml
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\Pages\photovoltaic\photovoltaicPage.baml
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\Pages\radiation\radiationPage.baml
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\Pages\Settings\About.baml
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\Pages\Settings\Appearance.baml
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\Pages\Home.baml
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\Pages\SettingsPage.baml
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\Pages\thermosolar\thermosolarPage.baml
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\App.baml
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\MainWindow.g.cs
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\Pages\arrays\arraysPage.g.cs
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\Pages\costs\costsPage.g.cs
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\Pages\photovoltaic\photovoltaicPage.g.cs
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\Pages\radiation\radiationPage.g.cs
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\Pages\Settings\About.g.cs
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\Pages\Settings\Appearance.g.cs
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\Pages\Home.g.cs
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\Pages\SettingsPage.g.cs
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\Pages\thermosolar\thermosolarPage.g.cs
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\App.g.cs
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\SolstatProjectUI_Content.g.cs
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\SolstatProjectUI_MarkupCompile.cache
+C:\Users\America\Desktop\victor\SolstatProjectUI\obj\Debug\SolstatProjectUI.g.resources
